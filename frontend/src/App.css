@@ -1,0 +1,44 @@
+.container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.logs-table th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+.logs-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.online {
+  color: green;
+  font-weight: 600;
+}
+
+.offline {
+  color: red;
+  font-weight: 600;
+}
