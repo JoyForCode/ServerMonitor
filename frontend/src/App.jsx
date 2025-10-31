@@ -6,7 +6,7 @@ function App() {
   const[logs, setLogs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3060/api/v1/logs")
+    axios.get("http://backend:3060/api/v1/logs")
     .then(res => setLogs(res.data))
     .catch(err => console.error("Error fetching logs:", err))
   }, [])
