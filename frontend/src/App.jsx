@@ -6,7 +6,7 @@ function App() {
   const[logs, setLogs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://backend:3060/api/v1/logs")
+    axios.get("http://192.168.1.100:3060/api/v1/logs")
     .then(res => setLogs(res.data))
     .catch(err => console.error("Error fetching logs:", err))
   }, [])
@@ -27,9 +27,7 @@ function App() {
             <tr key={index}>
               <td>{log.TimeStamp}</td>
               <td>{log.Host}</td>
-              <td className={log.Status === "Online" ? "online" : "offline"}>
-                {log.Status}
-              </td>
+              <td>{log.Status}</td>
             </tr>
           ))}
         </tbody>
