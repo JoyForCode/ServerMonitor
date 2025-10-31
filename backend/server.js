@@ -1,8 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const logRoutes = require('./routes/logRoute');
 const mongoose = require('mongoose')
+
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}))
 
 app.use('/api/v1', logRoutes);
 
