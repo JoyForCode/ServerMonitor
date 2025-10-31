@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const LogSchema = new mongoose.Schema({
     TimeStamp: {
-        type: Date,
+        type: String,
         required: true,
     },
     Host: {
